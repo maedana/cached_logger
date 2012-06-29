@@ -1,7 +1,5 @@
 # CachedLogger
 
-TODO: Write a gem description
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -18,7 +16,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    > logger = CachedLogger::Logger.new(STDOUT)
+    > logger.info 'Hello'
+    => I, [2012-06-29T12:11:18.848361 #21796]  INFO -- : Hello
+    > logger.info 'Good bye'
+    => I, [2012-06-29T12:11:25.707681 #21796]  INFO -- : Good bye
+    > logger.caches
+    => ["Hello", "Good bye"] 
+    > logger.caches.clear!
+    => [] 
 
 ## Contributing
 
